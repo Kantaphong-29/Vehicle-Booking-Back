@@ -4,14 +4,15 @@
   "description": "Backend API - ระบบบริการจองรถตู้ออนไลน์ คณะศึกษาศาสตร์ มหาวิทยาลัยศิลปากร",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "npx prisma migrate deploy && node src/server.js",
     "dev": "nodemon src/server.js",
-    "postinstall": "chmod +x node_modules/.bin/* && npx prisma generate && npx prisma migrate deploy",
+    "postinstall": "chmod +x node_modules/.bin/* && npx prisma generate",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio",
     "prisma:seed": "node prisma/seed.js"
   },
+
   "prisma": {
     "seed": "node prisma/seed.js"
   },
