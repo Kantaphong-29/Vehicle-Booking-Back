@@ -9,7 +9,10 @@ const userRoutes = require('./routes/userRoutes');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:3000", "https://your-frontend-domain.up.railway.app"],
+  credentials: true
+}));
 app.use(express.json({ limit: '5mb' })); // เพิ่ม limit เพื่อรองรับรูปโปรไฟล์แบบ base64
 
 app.get('/', (req, res) => {
