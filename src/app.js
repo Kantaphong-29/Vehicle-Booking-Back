@@ -10,7 +10,7 @@ const userRoutes = require('./routes/userRoutes');
 const app = express();
 
 app.use(cors({
-  origin: ["http://localhost:3000", "https://your-frontend-domain.up.railway.app"],
+  origin: ["http://localhost:3000", "https://vehicle-booking-front-x425.vercel.app"],
   credentials: true
 }));
 app.use(express.json({ limit: '5mb' })); // เพิ่ม limit เพื่อรองรับรูปโปรไฟล์แบบ base64
